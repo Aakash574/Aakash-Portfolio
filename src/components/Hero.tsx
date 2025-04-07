@@ -5,8 +5,8 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20 md:pt-28 pb-32 md:pb-40 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/ddeb90d7-4cb2-49a5-bd3d-bb1e46e3ef3a.png')] bg-cover bg-center opacity-20"></div>
+    <section className="relative pt-20 md:pt-28 pb-32 md:pb-40 bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/ddeb90d7-4cb2-49a5-bd3d-bb1e46e3ef3a.png')] bg-cover bg-center opacity-10"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-7 space-y-6">
@@ -15,7 +15,7 @@ const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins tracking-tight">
                 Aakash Panwar
               </h1>
-              <div className="h-1 w-20 bg-portfolio-lightBlue mt-2"></div>
+              <div className="h-1 w-20 bg-white mt-2"></div>
             </div>
             
             <h3 className="text-xl md:text-2xl font-medium text-gray-200">
@@ -29,21 +29,21 @@ const Hero = () => {
             
             <div className="flex items-center space-x-6">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-portfolio-lightBlue transition-colors">
+                className="text-white hover:text-white/70 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-portfolio-lightBlue transition-colors">
+                className="text-white hover:text-white/70 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
               <a href="mailto:contact@example.com" 
-                className="text-white hover:text-portfolio-lightBlue transition-colors">
+                className="text-white hover:text-white/70 transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
             
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <Button className="bg-portfolio-blue hover:bg-portfolio-darkBlue text-white" size="lg">
+              <Button className="bg-white hover:bg-white/90 text-black" size="lg">
                 Download CV
               </Button>
               <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg">
@@ -61,7 +61,7 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-portfolio-darkBlue px-6 py-2 rounded-full font-medium shadow-lg">
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black px-6 py-2 rounded-full font-medium shadow-lg">
                 Flutter Developer
               </div>
             </div>
