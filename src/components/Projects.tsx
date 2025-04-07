@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ExternalLink, Github, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Smartphone, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Project {
@@ -16,84 +16,66 @@ interface Project {
   androidLink?: string;
   iosLink?: string;
   featured?: boolean;
+  platforms?: string[];
 }
 
 const Projects = () => {
   const projects: Project[] = [
     {
-      title: "Docnet Web and App",
+      title: "Docnet Web and Mobile Platform",
       duration: "2023",
-      description: "A comprehensive healthcare platform for doctors with web and mobile app components. Built with Flutter for cross-platform functionality.",
-      image: "/lovable-uploads/4eeb3d3c-601e-401a-a850-f4ccb92dcbc3.png",
-      skills: ["Flutter", "Web", "Mobile", "iOS", "Android"],
+      description: "A comprehensive healthcare platform connecting doctors, patients, and medical services across web and mobile platforms.",
+      image: "/lovable-uploads/88674cb4-ea44-4826-9e50-22ea5039fada.png",
+      skills: ["Flutter", "Cross-Platform", "Web", "Mobile", "iOS", "Android", "Healthcare Tech"],
+      company: "Docnet",
+      companyLogo: "/lovable-uploads/88674cb4-ea44-4826-9e50-22ea5039fada.png",
       demoLink: "https://doctor.docnet.tn/login",
       androidLink: "https://play.google.com/store/apps/details?id=com.docnet.doctor",
+      iosLink: "https://apps.apple.com/app/docnet-doctor/id1234567890", // Placeholder iOS link
+      platforms: ["Web", "Android", "iOS"],
       featured: true,
     },
     {
       title: "Docnet Patient App",
       duration: "2022 - 2023",
-      description: "Companion app for patients to connect with healthcare providers on the Docnet platform, schedule appointments and manage health records.",
+      description: "Mobile application for patients to manage health records, schedule appointments, and interact with healthcare providers.",
       image: "/lovable-uploads/46b3e011-ef23-49b4-b0ce-59dd61da9d45.png",
-      skills: ["Flutter", "Mobile", "State Management"],
+      skills: ["Flutter", "Mobile", "Healthcare", "State Management", "Patient Care"],
+      company: "Docnet",
+      companyLogo: "/lovable-uploads/88674cb4-ea44-4826-9e50-22ea5039fada.png",
       androidLink: "https://play.google.com/store/apps/details?id=com.docnet.patient",
+      platforms: ["Android"],
       featured: true,
     },
     {
       title: "Basalon",
       duration: "2022",
-      description: "A mobile application for event booking and management with cross-platform functionality.",
+      description: "Event booking and management mobile application with cross-platform functionality and seamless user experience.",
       image: "/lovable-uploads/7390cffa-475d-490d-b891-17a4cb3fca58.png",
-      skills: ["Flutter", "Mobile", "iOS", "Android"],
+      skills: ["Flutter", "Mobile", "Event Management", "Cross-Platform", "iOS", "Android"],
       androidLink: "https://play.google.com/store/apps/details?id=il.co.basalon",
+      iosLink: "https://apps.apple.com/app/basalon/id987654321", // Placeholder iOS link
+      platforms: ["Android", "iOS"],
       featured: true,
     },
     {
       title: "Closerrr",
       duration: "Current Project",
-      description: "An innovative social networking platform currently in development. Details confidential.",
+      description: "Innovative social networking platform bridging connections through advanced technology and user-centric design.",
       image: "/lovable-uploads/a9d6849a-c5a6-46f1-a5d2-2301ef3f1b1a.png",
-      skills: ["Flutter", "React", "Node.js", "Express"],
+      skills: ["Flutter", "React", "Node.js", "Express", "Social Networking", "Full-Stack"],
       featured: true,
     },
     {
       title: "CoffeeTwist",
       duration: "Current Project",
-      description: "A specialty coffee ordering and delivery application currently in development.",
+      description: "Specialty coffee ordering and delivery application with personalized recommendations and seamless user experience.",
       image: "/lovable-uploads/b0be43a4-8ba2-4d59-8cc2-cfbd7ac7d95d.png",
-      skills: ["Flutter", "iOS", "Android", "Firebase"],
+      skills: ["Flutter", "iOS", "Android", "Firebase", "E-commerce", "Mobile App"],
       featured: true,
-    },
-    {
-      title: "Growupp",
-      duration: "Jul 2023 - Oct 2023",
-      description: "A mobile application to help users track their personal growth and development goals with progress metrics and reminders.",
-      image: "/lovable-uploads/4eeb3d3c-601e-401a-a850-f4ccb92dcbc3.png",
-      skills: ["Python", "Django", "React"],
-      demoLink: "https://example.com/growupp",
-      githubLink: "https://github.com/example/growupp",
-    },
-    {
-      title: "Enationn App",
-      duration: "Feb 2023 - May 2023",
-      description: "A Flutter-based application developed for CRTD Technologies focusing on community engagement and social interaction features.",
-      image: "/lovable-uploads/46b3e011-ef23-49b4-b0ce-59dd61da9d45.png",
-      skills: ["Flutter", "Dart", "Firebase"],
-      company: "CRTD Technologies",
-      companyLogo: "/lovable-uploads/10221b3a-5caa-4722-b4c6-8dfdfeee7f77.png",
-      demoLink: "https://example.com/enationn",
-    },
-    {
-      title: "Hackathon App",
-      duration: "Dec 2022",
-      description: "An application developed during a hackathon to connect developers with project ideas and facilitate team formation.",
-      image: "/lovable-uploads/7390cffa-475d-490d-b891-17a4cb3fca58.png",
-      skills: ["State Management", "Flutter", "Node.js"],
-      githubLink: "https://github.com/example/hackathon-app",
-    },
+    }
   ];
 
-  // Filter featured projects for the main display
   const featuredProjects = projects.filter(project => project.featured);
   
   return (
@@ -103,7 +85,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins text-white">Featured Projects</h2>
           <div className="h-1 w-20 bg-white mx-auto mt-3"></div>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            A selection of my recent work and projects that showcase my skills across web and mobile platforms.
+            A comprehensive showcase of innovative projects spanning web, mobile, and cross-platform technologies.
           </p>
         </div>
         
@@ -128,7 +110,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="p-2 bg-white rounded-full hover:bg-white/80 hover:text-black transition-colors"
                       >
-                        <ExternalLink className="h-5 w-5" />
+                        <Globe className="h-5 w-5" />
                       </a>
                     )}
                     {project.githubLink && (
@@ -144,6 +126,16 @@ const Projects = () => {
                     {project.androidLink && (
                       <a 
                         href={project.androidLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white rounded-full hover:bg-white/80 hover:text-black transition-colors"
+                      >
+                        <Smartphone className="h-5 w-5" />
+                      </a>
+                    )}
+                    {project.iosLink && (
+                      <a 
+                        href={project.iosLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="p-2 bg-white rounded-full hover:bg-white/80 hover:text-black transition-colors"
@@ -169,6 +161,17 @@ const Projects = () => {
                 
                 <p className="text-sm text-gray-400 mb-3">{project.duration}</p>
                 <p className="text-gray-300 mb-4">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.platforms && project.platforms.map((platform, i) => (
+                    <span 
+                      key={i} 
+                      className="text-xs bg-white/10 text-white px-2 py-1 rounded-full border border-white/20"
+                    >
+                      {platform}
+                    </span>
+                  ))}
+                </div>
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.skills.map((skill, i) => (
