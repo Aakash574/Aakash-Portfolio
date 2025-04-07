@@ -17,8 +17,14 @@ const Skills = () => {
     { name: "Dart", level: 85, category: "Mobile" },
     { name: "Python", level: 80, category: "Programming" },
     { name: "JavaScript", level: 75, category: "Web" },
+    { name: "Node.js", level: 78, category: "Web" },
+    { name: "Express", level: 76, category: "Web" },
+    { name: "EJS", level: 72, category: "Web" },
     { name: "Django", level: 70, category: "Web" },
     { name: "Android SDK", level: 65, category: "Mobile" },
+    { name: "iOS Development", level: 60, category: "Mobile" },
+    { name: "Swift", level: 55, category: "Mobile" },
+    { name: "MongoDB", level: 70, category: "Database" },
     { name: "GitHub", level: 85, category: "Tools" },
     { name: "State Management", level: 80, category: "Concepts" },
     { name: "Tailwind", level: 75, category: "Web" },
@@ -97,10 +103,12 @@ const Skills = () => {
           
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              "Flutter", "Dart", "Python", "JavaScript", "Django", "Android SDK", 
+              "Flutter", "Dart", "Python", "JavaScript", "Node.js", "Express", "EJS",
+              "Django", "Android SDK", "iOS Development", "Swift", "MongoDB",
               "GitHub", "State Management", "Mobile Applications", "Tailwind CSS", 
               "Bootstrap", "SQL", "C++", "Firebase", "REST API", "JSON",
-              "Git", "VS Code", "Android Studio", "UI/UX", "Responsive Design"
+              "Git", "VS Code", "Android Studio", "UI/UX", "Responsive Design",
+              "Cross-Platform Development", "RESTful Services", "JWT"
             ].map((tech) => (
               <span 
                 key={tech} 

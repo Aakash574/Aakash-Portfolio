@@ -19,12 +19,13 @@ const Hero = () => {
             </div>
             
             <h3 className="text-xl md:text-2xl font-medium text-gray-200">
-              Flutter Developer | SDE 2
+              Flutter & Full-Stack Developer | SDE 2
             </h3>
             
             <p className="text-base md:text-lg text-gray-300 max-w-2xl">
               Computer Science Engineer with a deep passion for technology and a relentless drive 
-              to innovate and simplify human life. Specializing in Dart, Python, JS, Django, Flutter with Tailwind and Bootstrap.
+              to innovate and simplify human life. Specializing in Flutter, iOS/Android development, 
+              and web technologies including Node.js, Express, EJS, Python, and Django.
             </p>
             
             <div className="flex items-center space-x-6">
@@ -62,7 +63,7 @@ const Hero = () => {
                 />
               </div>
               <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black px-6 py-2 rounded-full font-medium shadow-lg">
-                Flutter Developer
+                Flutter & Full-Stack Developer
               </div>
             </div>
           </div>
